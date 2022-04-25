@@ -1,15 +1,9 @@
+<script setup lang="ts">
+</script>
+
 <template>
-  <div class="about">
-    <h1>Here are my projects</h1>
-  </div>
+  <main>
+    <p>This is all the information about my projects</p>
+  </main>
 </template>
 
-<style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
-</style>
