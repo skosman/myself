@@ -13,7 +13,7 @@ import NavBar from './components/NavBar.vue'
 #app {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem 4rem;
   font-weight: normal;
 }
 
