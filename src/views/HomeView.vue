@@ -3,7 +3,9 @@
 
 <template>
   <header>
-    <h1>Hello, I'm Sam!</h1>
+    <h4>Hello, my name is Sam</h4>
+    <!-- add animation for typing and make it change -->
+    <h1>I write code</h1>
   </header>
   <div>
     <p>I'm a software engineering student at the University of Victoria</p>
