@@ -8,3 +8,9 @@
     <p>This is all the information about my projects</p>
   </main>
 </template>
+
+<style scoped>
+.title {
+  text-align: center;
+}
+</style>
