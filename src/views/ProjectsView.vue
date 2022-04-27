@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import ProjectItem from "../components/ProjectItem.vue";
+</script>
 
 <template>
   <header class="view-header">
@@ -6,6 +8,14 @@
   </header>
   <main>
     <p>This is all the information about my projects</p>
+    <ProjectItem
+      github-url="https://github.com/CSC485A-Slacker/slacker"
+      demo-url="https://github.com/CSC485A-Slacker/slacker"
+    >
+      <template #heading>Slacker</template>
+      <template #date>Jan 2022 - April 2022</template>
+      <template #description>An app to connect slackliners</template>
+    </ProjectItem>
   </main>
 </template>
 
