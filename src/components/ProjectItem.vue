@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import ToolingIcon from "./icons/IconTooling.vue";
 defineProps<{
   githubUrl: string;
   demoUrl: string;
@@ -17,6 +18,7 @@ defineProps<{
       <slot name="description"></slot>
     </p>
     <a :href="githubUrl" target="_blank">Github</a>
+    <tooling-icon />
     <a :href="demoUrl" target="_blank"> Demo </a>
     <p>
       <slot name="tech"></slot>
