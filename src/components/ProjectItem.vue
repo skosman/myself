@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import ToolingIcon from "./icons/IconTooling.vue";
+import GithubIcon from "./icons/IconGithub.vue";
+import VideoIcon from "./icons/IconVideo.vue";
 defineProps<{
   githubUrl: string;
   demoUrl: string;
@@ -17,9 +18,9 @@ defineProps<{
     <p>
       <slot name="description"></slot>
     </p>
-    <a :href="githubUrl" target="_blank">Github</a>
-    <tooling-icon />
-    <a :href="demoUrl" target="_blank"> Demo </a>
+    <a :href="githubUrl" target="_blank"><github-icon /></a>
+
+    <a :href="demoUrl" target="_blank"> <video-icon /> </a>
     <p>
       <slot name="tech"></slot>
     </p>
