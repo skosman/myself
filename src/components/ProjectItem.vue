@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import GithubIcon from "./icons/IconGithub.vue";
 import VideoIcon from "./icons/IconVideo.vue";
+import type { Project } from ".././data/interfaces";
 defineProps<{
-  project: {};
+  project: Project;
 }>();
 </script>
 
@@ -15,9 +16,11 @@ defineProps<{
     <p>
       {{ project.description }}
     </p>
-    <li v-for="(tech, index) in project.technology" :key="index">
-      {{ tech }}
-    </li>
+    <ul class="tech-list">
+      <li v-for="(tech, index) in project.technology" :key="index">
+        {{ tech }}
+      </li>
+    </ul>
 
     <a :href="project.githubUrl" target="_blank"><github-icon /></a>
 
@@ -25,4 +28,8 @@ defineProps<{
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.tech-list {
+  list-style-type: none;
+}
+</style>
