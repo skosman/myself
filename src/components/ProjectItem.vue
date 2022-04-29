@@ -2,28 +2,26 @@
 import GithubIcon from "./icons/IconGithub.vue";
 import VideoIcon from "./icons/IconVideo.vue";
 defineProps<{
-  githubUrl: string;
-  demoUrl: string;
+  project: {};
 }>();
 </script>
 
 <template>
   <div class="item">
-    <h3>
-      <slot name="heading"></slot>
-    </h3>
+    <h3>{{ project.name }}</h3>
     <h4>
-      <slot name="date"></slot>
+      {{ project.date }}
     </h4>
     <p>
-      <slot name="description"></slot>
+      {{ project.description }}
     </p>
-    <a :href="githubUrl" target="_blank"><github-icon /></a>
+    <li v-for="(tech, index) in project.technology" :key="index">
+      {{ tech }}
+    </li>
 
-    <a :href="demoUrl" target="_blank"> <video-icon /> </a>
-    <p>
-      <slot name="tech"></slot>
-    </p>
+    <a :href="project.githubUrl" target="_blank"><github-icon /></a>
+
+    <a :href="project.demoUrl" target="_blank"> <video-icon /> </a>
   </div>
 </template>
 
